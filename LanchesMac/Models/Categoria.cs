@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 
 // Nos projetos no estilo SDK como este, vários atributos de assembly que sempre eram
@@ -24,7 +25,11 @@ namespace LanchesMac.Models
     public class Categoria
     {
         public int CategoriaId { get; set; }
+
+        [StringLength(100)]
         public string CategoriaNome { get; set; }
+
+        [StringLength(200)]
         public string Descricao { get; set; }
 
         public List<Lanche> Lanches { get; set; }

@@ -1,3 +1,6 @@
+
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.InteropServices;
 
 // Nos projetos no estilo SDK como este, vários atributos de assembly que sempre eram
@@ -16,21 +19,38 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("af864403-4228-4d95-b651-fa78d9077c47")]
 
+//[Column(TypeName = "Decimal(18,2)]
+
+
 namespace LanchesMac.Models
 {
     public class Lanche
     {
         public int LancheId { get; set; }
 
+
+        [StringLength(100)]
         public string Nome { get; set; }
 
+
+        [StringLength(100)]
         public string DescricaoCurta { get; set; }
 
+
+        [StringLength(255)]
         public string DescricaoDetalhada { get; set; }
 
+
+
+        [Column(TypeName = "decimal(18,2")]
         public decimal Preco { get; set; }
+
+
+        [StringLength(200)]
         public string ImagemUrl { get; set; }
 
+
+        [StringLength(200)]
         public string ImagemThumbnailUrl { get; set; }
 
         public bool IsLanchePreferido { get; set; }
