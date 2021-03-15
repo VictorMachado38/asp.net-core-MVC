@@ -55,7 +55,7 @@ namespace LanchesMac.Models
 
         public bool IsLanchePreferido { get; set; }
 
-        public bool EmEsto que { get; set; }
+        public bool EmEstoque { get; set; }
 
         public int CategoriaId { get; set; }
 

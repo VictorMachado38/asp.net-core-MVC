@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Mvc;
 using LanchesMac.Repositories;
+
 namespace LanchesMac.Controllers
 {
 
@@ -17,6 +18,12 @@ namespace LanchesMac.Controllers
 
         public IActionResult List ()
         {
+            ViewBag.Lanche = "Lanches";
+            ViewData["Catergoria"] = "Categoria";
+
+            //---------------------------
+
+
             var lanches = _lancheRepository.Lanches;
             return View(lanches);
         }
