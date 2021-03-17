@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using LanchesMac.Models;
 
 namespace LanchesMac
 {
@@ -31,8 +33,9 @@ namespace LanchesMac
 
             services.AddTransient<ICategoriaRepositoriy, CategoriaRepository>();
             services.AddTransient<ILancheRepository, LancheRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-
+            services.AddScoped(cp => CarrinhoCompra.GetCarrinho(cp));
             services.AddControllersWithViews();
         }
 
@@ -51,7 +54,7 @@ namespace LanchesMac
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+           // app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

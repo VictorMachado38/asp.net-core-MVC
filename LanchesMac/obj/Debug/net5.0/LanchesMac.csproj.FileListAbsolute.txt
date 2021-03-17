@@ -146,3 +146,8 @@ C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\runtime
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Lanche\List.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Shared\_LanchesResumo.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompras\Create.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompras\Delete.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompras\Details.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompras\Edit.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompras\Index.cshtml.g.cs
