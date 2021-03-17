@@ -6,26 +6,30 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using LanchesMac.Repositories;
+using LanchesMac.ViewModels;
 
 namespace LanchesMac.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILancheRepository _lanche;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController (ILancheRepository lancheRepository)
         {
-            _logger = logger;
+            _lanche = lancheRepository;
         }
+
 
         public IActionResult Index()
         {
-            return View();
-        }
+            var homeViewModel = new HomeViewModel()
+            {
+                LanchesPreferidos = _lanche.LanchesPreferidos
+            };
 
-        public IActionResult Privacy()
-        {
-            return View();
+            return View(homeViewModel);
         }
 
        /* [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
