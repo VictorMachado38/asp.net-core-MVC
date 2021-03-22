@@ -1,7 +1,7 @@
 using LanchesMac.Models;
 using Microsoft.AspNetCore.Mvc;
 using LanchesMac.ViewModels;
-
+using System.Collections.Generic;
 namespace LanchesMac.Conponents
 {
     public class CarrinhoCompraResumo : ViewComponent
@@ -17,8 +17,9 @@ namespace LanchesMac.Conponents
 
         public IViewComponentResult Invoke()
         {
-            var itens = _carrinhoCompra.GetCarrinhoCompraItens();
-            _carrinhoCompra.CarrinhoCompraItens = itens;
+            //var itens = _carrinhoCompra.GetCarrinhoCompraItens();
+            var itensAUX = new List<CarrinhoCompraItem>() { new CarrinhoCompraItem() , new CarrinhoCompraItem()};
+            _carrinhoCompra.CarrinhoCompraItens = itensAUX;
 
             var carrinhoCompraVM = new CarrinhoCompraViewModels
             {
