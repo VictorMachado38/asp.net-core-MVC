@@ -34,7 +34,7 @@ using LanchesMac.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0c0d7fbd8f9c5344c8a67bff4654b9242af76f67", @"/Views/CarrinhoCompras/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4645c86be4dee05e5290fdcad03fec2e085f7861", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f294bbb7b93fe52c26dc65ee51985218c04b612b", @"/Views/_ViewImports.cshtml")]
     public class Views_CarrinhoCompras_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LanchesMac.Models.CarrinhoCompra>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "hidden", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

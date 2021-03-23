@@ -153,3 +153,4 @@ C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\V
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompras\Index.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Shared\_Carousel.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Shared\Components\CarrinhoCompraResumo\Default.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Contato\Index.cshtml.g.cs
