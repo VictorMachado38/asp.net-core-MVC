@@ -8,7 +8,7 @@ namespace LanchesMac.Controllers
 
     public class CategoriaController : Controller
     {
-        public CategoriaController(ICategoriaRepositoriy categoriaRepositoriy)
+        public CategoriaController(ICategoriaRepository categoriaRepositoriy)
         {
 
         }

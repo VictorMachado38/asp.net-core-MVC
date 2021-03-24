@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace LanchesMac.Repositories
 {
 
-    public interface ICategoriaRepositoriy
+    public interface ICategoriaRepository 
     {
         IEnumerable<Categoria> Categorias { get; }
         object Lanches { get; }

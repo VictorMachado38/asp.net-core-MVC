@@ -12,42 +12,46 @@ namespace LanchesMac.Controllers
     public class LancheController : Controller
     {
         private readonly ILancheRepository _lancheRepository;
-        private readonly ICategoriaRepositoriy _categoriaRepositoriy;
+        private readonly ICategoriaRepository _categoriaRepositoriy;
 
-        public LancheController(ILancheRepository lancheRepository, ICategoriaRepositoriy categoriaRepositoriy)
+        public LancheController(ILancheRepository lancheRepository, ICategoriaRepository categoriaRepositoriy)
         {
             _lancheRepository = lancheRepository;
             _categoriaRepositoriy = categoriaRepositoriy;
         }
 
-        public IActionResult List (string catergoia)
+        public IActionResult List (string categoria)
         {
-            string _catergoria = catergoia;
+            string _categoria = categoria;
             IEnumerable<Lanche> lanches;
             string categoriaAtual = string.Empty;
 
-            if(string.IsNullOrEmpty(catergoia))
+            if(string.IsNullOrEmpty(categoria))
             {
-                lanches = _lancheRepository.Lanches.OrderBy(l => l.LanchesId);
+                lanches = _lancheRepository.Lanches.OrderBy(l => l.LancheId);
                 categoriaAtual = "Todos os lanches";
             }
             else
             {
-                if(string.Equals("Normal",_catergoria, System.StringComparison.OrdinalIgnoreCase))
-                {
-                    lanches = _lancheRepository.Lanches.Where(l => l.Categoria.CategoriaNome.Equals("Normal")).OrderBy(l => l.Nome);
-                }
-                else
-                {
-                    lanches = _lancheRepository.Lanches.Where(l => l.Categoria.CategoriaNome.Equals("Natural")).OrderBy(l => l.Nome);
-                }
+                lanches = _lancheRepository.Lanches
+                            .Where(p => p.Categoria.CategoriaNome.Equals(categoria))
+                            .OrderBy(p => p.Nome);
+
+               
+                categoriaAtual = _categoria;
             
             }
 
-            var lanchesListModel = new LancheListViewModel();
-            lanchesListModel.Lanches = _lancheRepository.Lanches;
-            lanchesListModel.CategoriaAtual = "Categoria atual definido no contorler";
-            return View(lanchesListModel);
+            var lancheListViewModel = new LancheListViewModel
+            {
+                Lanches = lanches,
+                CategoriaAtual = categoriaAtual
+            };
+
+            //var lanchesListModel = new LancheListViewModel();
+            //lanchesListModel.Lanches = _lancheRepository.Lanches;
+            //lanchesListModel.CategoriaAtual = "Categoria atual definido no contorler";
+            return View(lancheListViewModel);
         }
         
     }

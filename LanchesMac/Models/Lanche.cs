@@ -60,7 +60,7 @@ namespace LanchesMac.Models
         public int CategoriaId { get; set; }
 
         public virtual Categoria Categoria { get; set; }
-        public object LanchesId { get; internal set; }
+       // public object LanchesId { get; internal set; }
     }
 
 }

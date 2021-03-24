@@ -31,7 +31,7 @@ namespace LanchesMac
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<ICategoriaRepositoriy, CategoriaRepository>();
+            services.AddTransient<ICategoriaRepository, CategoriaRepository>();
             services.AddTransient<ILancheRepository, LancheRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -61,8 +61,33 @@ namespace LanchesMac
 
             app.UseAuthorization();
 
+            //app.UseEndpoints(endpoints =>
+            //{
+
+            //    //endpoints.MapControllerRoute(
+            //    //    name: "AreaDoADM",
+            //    //    pattern: "{area:exist}/{controller=Admin}/{action=Index}/{id}");
+
+            //    endpoints.MapControllerRoute(
+            //        name: "categoriaFiltro",
+            //        pattern: "Lanche/{action}/{categoria?}",
+            //        defaults: new { Controller = "Lanche", action = "List"});
+
+
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //});
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "AdminArea",
+                    pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(name: "categoriaFiltro",
+                   pattern: "Lanche/{action}/{categoria?}",
+                   defaults: new { Controller = "Lanche", action = "List" });
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
