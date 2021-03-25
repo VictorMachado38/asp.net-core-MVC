@@ -12,12 +12,12 @@ namespace LanchesMac.Controllers
     public class LancheController : Controller
     {
         private readonly ILancheRepository _lancheRepository;
-        private readonly ICategoriaRepository _categoriaRepositoriy;
+        //private readonly ICategoriaRepository _categoriaRepositoriy;
 
-        public LancheController(ILancheRepository lancheRepository, ICategoriaRepository categoriaRepositoriy)
+        public LancheController(ILancheRepository lancheRepository/*, ICategoriaRepository categoriaRepositoriy*/)
         {
             _lancheRepository = lancheRepository;
-            _categoriaRepositoriy = categoriaRepositoriy;
+            //_categoriaRepositoriy = categoriaRepositoriy;
         }
 
         public IActionResult List (string categoria)

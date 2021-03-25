@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+  using System.Collections.Generic;
 using LanchesMac.Models;
 using System.Runtime.InteropServices;
 
@@ -9,5 +9,6 @@ namespace LanchesMac.Repositories
     {
         IEnumerable<Categoria> Categorias { get; }
         object Lanches { get; }
+        
     }
 }
