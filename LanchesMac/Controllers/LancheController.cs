@@ -63,6 +63,24 @@ namespace LanchesMac.Controllers
             }
             return View(lanche);
         }
+
+        public IActionResult Search (string searchString)
+        {
+           var  _searchString = searchString;
+            IEnumerable<Lanche> lanches;
+            string _categoriaAtual = string.Empty;
+
+            if (string.IsNullOrEmpty(_searchString))
+            {
+                lanches = _lancheRepository.Lanches;
+
+            }
+            else
+            {                                                   //retona os lanches com o nome degitado não importando se estiver em caixa alta     
+                lanches = _lancheRepository.Lanches.Where(l => l.Nome.ToLower().Contains(_searchString));
+            }
+            return View("~/Views/Lanche/List.cshtml", new LancheListViewModel { Lanches = lanches, CategoriaAtual = "Todos os lanches" });
+        }
     }
 
 }
