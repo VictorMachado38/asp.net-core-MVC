@@ -157,3 +157,5 @@ C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\V
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompra\Details.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompra\Edit.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompra\Index.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Pedido\Checkout.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Pedido\CheckoutCompleto.cshtml.g.cs
