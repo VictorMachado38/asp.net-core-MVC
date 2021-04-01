@@ -49,30 +49,31 @@ namespace LanchesMac.Controllers
                 _pedidoRepository.CriarPedido(pedido);
                // _carrinhoCompra.LimparCarrinho();
 
-                TempData["Cliente"] = pedido.Nome;
-               // TempData["Clietne"] = JsonConvert.SerializeObject(pedido.Nome);
-                TempData["NumeroPedido"] = pedido.PedidoId;
-                TempData["Quantidade"] = totalItemPedido.ToString();
-                TempData["DataPedido"] = pedido.PedidoEnviado;
-                TempData["TotalPedido"] = precoTotalPedido.ToString();
+                //TempData["Cliente"] = pedido.Nome;
+                //TempData["NumeroPedido"] = pedido.PedidoId;
+                //TempData["Quantidade"] = totalItemPedido.ToString();
+                //TempData["DataPedido"] = pedido.PedidoEnviado;
+
+                ViewBag.CheckoutCompletoMensagem = "Finalizando o seu pedido";
+                ViewBag.TotalPedido = precoTotalPedido;
 
                 _carrinhoCompra.LimparCarrinho();
-                return RedirectToAction("CheckoutCompleto");
+                return View("~/Views/Pedido/CheckoutCompleto.cshtml",pedido);
                
             }
             return View(pedido);
         }
 
-        public IActionResult CheckoutCompleto()
-        {
-                ViewBag.Cliente = TempData["Cliente"]; 
+        //public IActionResult CheckoutCompleto()
+        //{
+        //        ViewBag.Cliente = TempData["Cliente"]; 
                 
-                ViewBag.NumeroPedido = TempData["NumeroPedido"];
-                ViewBag.DataPedido = TempData["DataPedido"];
-                ViewBag.TotalPedido = TempData["TotalPedido"];
-            ViewBag.Quantidade = TempData["Quantidade"];
-                ViewBag.CheckoutCompletoMensagem = "VALEU AEEEE, Já Já VOCE VAI ESTAR COMENDO";
-            return View();
-        }
+        //        ViewBag.NumeroPedido = TempData["NumeroPedido"];
+        //        ViewBag.DataPedido = TempData["DataPedido"];
+        //        ViewBag.TotalPedido = TempData["TotalPedido"];
+        //        ViewBag.Quantidade = TempData["Quantidade"];
+                
+        //    return View();
+        //}
     }
 }

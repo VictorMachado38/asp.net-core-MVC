@@ -159,3 +159,8 @@ C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\V
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\CarrinhoCompra\Index.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Pedido\Checkout.cshtml.g.cs
 C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\obj\Debug\net5.0\Razor\Views\Pedido\CheckoutCompleto.cshtml.g.cs
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Machado\Documents\MeusProjetos\_mvc\LanchesMac\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll

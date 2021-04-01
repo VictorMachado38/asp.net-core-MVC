@@ -151,7 +151,7 @@ namespace LanchesMac.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("PedidoEnvaido")
+                    b.Property<DateTime>("PedidoEnviado")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("PedidoTotal")

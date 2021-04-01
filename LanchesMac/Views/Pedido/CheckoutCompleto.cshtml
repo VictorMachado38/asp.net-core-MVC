@@ -1,20 +1,30 @@
-﻿<br />
+﻿@model Pedido
+<br />
+<br />
 <div class="container">
     <div class="jumbotron">
         <h2 style="text-align: center;">@ViewBag.CheckoutCompletoMensagem</h2>
-
-        <br />
-        <h2>Obriado pela compra <strong>@ViewBag.Cliente</strong></h2>
-        <br />
-        <h2>Número do pedido: <strong>@ViewBag.NumeroPedido</strong></h2>
-        <br />
-        <h2>Horario do pedido: <strong>@ViewBag.DataPedido</strong></h2>
-        <br />
-        <h2>Valor: R$<strong> @ViewBag.TotalPedido</strong></h2>
-        <br />
-        <hr>
-        <h2>Quantidad: <strong>@ViewBag.Quantidade</strong></h2>
-
-
     </div>
+    <div class="card">
+        <div class="card-body">
+
+            <p>Cliente <strong>@Model.Nome</strong></p>
+            <p>Data do pedido: <strong>@Model.PedidoEnviado</strong></p>
+            <p>Número do pedido: <strong>@Model.PedidoId</strong></p>
+            <br />
+            
+            @foreach (var item in Model.PedidoItens)
+            {
+                <img src="@item.Lanche.ImagemUrl" width="177.5" height="71" />
+                <br />
+                <ul>Quantidade: @item.Quantidade</ul>
+                <ul>Hanburguer: @item.Lanche.Nome</ul>
+                <ul>Valoe: R$@item.Lanche.Preco</ul>
+
+
+            }
+
+            <p> Valor Total do Pedido: <strong>@(((decimal)ViewBag.TotalPedido).ToString("C2"))</strong></p>
+
+        </div>
 </div>
