@@ -20,9 +20,15 @@
 
                     <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     @await Component.InvokeAsync("CategoriaMenu")
-                    <a class="nav-link text-light" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a>
+                    <a 
+                       
+                       class="nav-link text-light" asp-area="" asp-controller="Contato" asp-action="Index">
+                        
+                        Contato
+                    
+                    </a>
                    
-                    <a class="nav-link text-light" asp-area="" asp-controller="Teste" asp-action="Index">TESTE CARAI</a>
+                   @*<a class="nav-link text-light" asp-area="" asp-controller="Teste" asp-action="Index">TESTE CARAI</a>*@
 
                     @await Component.InvokeAsync("CarrinhoCompraResumo");
 

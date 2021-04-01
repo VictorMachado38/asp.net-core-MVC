@@ -43,13 +43,25 @@
     </table>
 
     <div class="text-right">
-        <div class="btn-group ">
-            <a class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido</a>
+        <div class="btn-group">
+            <a 
+               
+               class="btn btn-success" asp-controller="Pedido" asp-action="Checkout">Encerrar Pedido
+            
+            </a>
+
             <a class="btn-group">
+
                 <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                   
                     Mais Lanches  <span class="caret"></span>
+
                 </a>
+
+
                 @await Component.InvokeAsync("CategoriaMenu")
+
+
             </a>
         </div>
     </div>
